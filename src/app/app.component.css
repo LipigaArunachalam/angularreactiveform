@@ -1,0 +1,70 @@
+/* src/app/feedback/feedback.component.css */
+
+/* Basic form styling */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #036174;
+    border-radius: 5px;
+    background-color: #78bdda97;
+  }
+
+ 
+  
+  h1 {
+    text-align: center;
+  }
+  
+  div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  input:focus, textarea:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: rgb(7, 8, 7);
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  button:disabled {
+    background-color: #c0a6a6;
+    cursor: not-allowed;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Feedback submitted message */
+  p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,42 @@
+
+<h1>Feedback Form</h1>
+
+<form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="feedback.name" #name="ngModel" required>
+    <div *ngIf="name.invalid && name.touched" class="error">
+      Name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="feedback.email" #email="ngModel" required email>
+    <div *ngIf="email.invalid && email.touched" class="error">
+      Valid email is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="message">Feedback:</label>
+    <textarea id="message" name="message" [(ngModel)]="feedback.message" #message="ngModel" required></textarea>
+    <div *ngIf="message.invalid && message.touched" class="error">
+      Feedback is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="feedbackForm.invalid">Submit</button>
+
+</form>
+
+<div *ngIf="submitted">
+  <p>Feedback submitted successfully!</p>
+</div>
+
+<style>
+  .error {
+    color: red;
+  }
+</style>
